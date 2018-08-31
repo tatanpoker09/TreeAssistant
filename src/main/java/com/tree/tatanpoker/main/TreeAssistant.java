@@ -4,6 +4,7 @@ import com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse;
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import com.tree.tatanpoker.audio.CMUSphinxHandler;
 import com.tree.tatanpoker.audio.HotwordRecognition;
+import com.tree.tatanpoker.audio.PorcupineHandler;
 import com.tree.tatanpoker.audio.SpeechHandler;
 
 import javax.sound.sampled.*;
@@ -20,7 +21,7 @@ public class TreeAssistant {
     private static void setupManagers() {
         SpeechHandler sh = new SpeechHandler();
         sh.speak("Hello, and welcome to Tree Voice Assistant.");
-        HotwordRecognition handler = new CMUSphinxHandler();
+        HotwordRecognition handler = new PorcupineHandler();
         try {
             handler.startRecognition();
         } catch (IOException e) {
