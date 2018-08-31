@@ -1,0 +1,4 @@
+#JSGF V1.0;
+
+grammar hotword;
+public <detect> = alexa | hey tree;
